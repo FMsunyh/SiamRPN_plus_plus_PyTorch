@@ -58,7 +58,7 @@ class ImagnetVIDDataset(Dataset):
         '''
 
     def imread(self, path):
-        path = "." + path[15:]
+        path = "." + path[20:]
         key = hashlib.md5(path.encode()).digest()
         img_buffer = self.txn.get(key)
         #print img_buffer

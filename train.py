@@ -82,10 +82,10 @@ lr_protocol = basic_configs["lr_protocol"]
 dataloader_configs = collections.OrderedDict()
 dataloader_configs['batch_size'] = args.batch_size
 dataloader_configs['num_workers'] = args.num_workers
-print '==> training pair url loading......'
+print('==> training pair url loading......')
 #load_file = open(args.training_pairs_with_annotations, 'rb')
 #dataloader_configs['training_pairs_with_annotations'] = pickle.load(load_file)
-print '==> loading finished......'
+print('==> loading finished......')
 # TODO
 dataloader_configs['transform'] = transforms.Compose([transforms.ToTensor()])
 dataloader_configs['random_shift_factor'] = args.random_shift_factor
@@ -103,6 +103,12 @@ train_loader = torch.utils.data.DataLoader(
 #ipdb.set_trace()
 data_dir = args.data_dir
 db = lmdb.open(data_dir + '.lmdb', readonly=True, map_size=int(200e9))
+# txn = db.begin()
+# for key, value in txn.cursor():  # 遍历
+#     # print(key, value)
+#     print(key)
+#     break
+
 
 # create dataset
 # -----------------------------------------------------------------------------------------------------

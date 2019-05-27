@@ -1,1 +1,1 @@
-python create_dataset.py --vid-dir /home3/lk/ILSVRC2015 --output-dir ./VID_2015_RPN++
+python ./preprocessing/create_dataset.py --vid-dir /home/syh/train_data/ILSVRC2015 --output-dir ./data/VID_2015_RPN++

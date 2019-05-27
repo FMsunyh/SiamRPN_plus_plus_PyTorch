@@ -1,5 +1,5 @@
-from customized_resnet import *
-from RPN import *
+from .customized_resnet import *
+from .RPN import *
 
 
 class SiamRPN(nn.Module):

@@ -41,7 +41,7 @@ def rpn_cross_entropy_balance(input, target, num_pos, num_neg, ohem_pos=None, oh
                     anchors[pos_index], pos_loss_bid.cpu().detach().numpy(), min_pos)
                 pos_loss_bid_final = pos_loss_bid[selected_pos_index]
             else:
-                print 'Feng Jin'
+                print('Feng Jin')
                 pos_loss_bid = torch.FloatTensor([0])  # .cuda()
                 pos_loss_bid_final = pos_loss_bid
         else:
